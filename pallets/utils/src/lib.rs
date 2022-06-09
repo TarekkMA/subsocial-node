@@ -240,7 +240,7 @@ impl<T: Config> Module<T> {
             Content::IPFS(ipfs_cid) => {
                 let len = ipfs_cid.len();
                 // IPFS CID v0 is 46 bytes.
-                // IPFS CID v1 is 59 bytes.df-integration-tests/src/lib.rs:272:5
+                // IPFS CID v1 is 59 bytes.integration-tests/src/lib.rs:272:5
                 ensure!(len == 46 || len == 59, Error::<T>::InvalidIpfsCid);
                 Ok(())
             },

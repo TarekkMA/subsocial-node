@@ -1147,37 +1147,6 @@ dependencies = [
 ]
 
 [[package]]
-name = "df-integration-tests"
-version = "0.7.3"
-dependencies = [
- "frame-support",
- "frame-system",
- "pallet-balances",
- "pallet-moderation",
- "pallet-permissions",
- "pallet-post-history",
- "pallet-posts",
- "pallet-profile-follows",
- "pallet-profile-history",
- "pallet-profiles",
- "pallet-reactions",
- "pallet-roles",
- "pallet-space-follows",
- "pallet-space-history",
- "pallet-space-ownership",
- "pallet-spaces",
- "pallet-timestamp",
- "pallet-utils",
- "parity-scale-codec",
- "scale-info",
- "serde",
- "sp-core",
- "sp-io",
- "sp-runtime",
- "sp-std",
-]
-
-[[package]]
 name = "df-traits"
 version = "0.7.3"
 dependencies = [
@@ -2302,6 +2271,37 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "276ec31bcb4a9ee45f58bec6f9ec700ae4cf4f4f8f2fa7e06cb406bd5ffdd770"
 dependencies = [
  "num-traits",
+]
+
+[[package]]
+name = "integration-tests"
+version = "0.7.3"
+dependencies = [
+ "frame-support",
+ "frame-system",
+ "pallet-balances",
+ "pallet-moderation",
+ "pallet-permissions",
+ "pallet-post-history",
+ "pallet-posts",
+ "pallet-profile-follows",
+ "pallet-profile-history",
+ "pallet-profiles",
+ "pallet-reactions",
+ "pallet-roles",
+ "pallet-space-follows",
+ "pallet-space-history",
+ "pallet-space-ownership",
+ "pallet-spaces",
+ "pallet-timestamp",
+ "pallet-utils",
+ "parity-scale-codec",
+ "scale-info",
+ "serde",
+ "sp-core",
+ "sp-io",
+ "sp-runtime",
+ "sp-std",
 ]
 
 [[package]]
