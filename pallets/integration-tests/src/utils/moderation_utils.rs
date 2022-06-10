@@ -6,7 +6,7 @@ use pallet_utils::{Content, SpaceId};
 use pallet_utils::mock_functions::valid_content_ipfs;
 
 use crate::mock::*;
-use crate::old_utils::{ACCOUNT1, POST1, SPACE1};
+use crate::utils::{ACCOUNT1, POST1, SPACE1};
 
 // Moderation pallet mocks
 // FIXME: remove when linter error is fixed

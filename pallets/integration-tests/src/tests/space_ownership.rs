@@ -5,7 +5,7 @@ use pallet_space_ownership::Error as SpaceOwnershipError;
 use pallet_spaces::Error as SpacesError;
 
 use crate::mock::*;
-use crate::old_utils::*;
+use crate::utils::*;
 use crate::utils::space_ownership_utils::*;
 
 #[test]

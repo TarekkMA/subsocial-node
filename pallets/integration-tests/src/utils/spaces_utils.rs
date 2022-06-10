@@ -5,7 +5,7 @@ use pallet_spaces::{SpacesSettings, SpaceUpdate};
 use pallet_utils::{Content, SpaceId};
 
 use crate::mock::*;
-use crate::old_utils::{ACCOUNT1, SPACE1};
+use crate::utils::{ACCOUNT1, SPACE1};
 
 /// Lowercase a handle and then try to find a space id by it.
 pub(crate) fn find_space_id_by_handle(handle: Vec<u8>) -> Option<SpaceId> {

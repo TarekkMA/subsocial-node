@@ -3,7 +3,7 @@ use frame_support::pallet_prelude::*;
 use pallet_utils::SpaceId;
 
 use crate::mock::*;
-use crate::old_utils::{ACCOUNT2, SPACE1};
+use crate::utils::{ACCOUNT2, SPACE1};
 
 pub(crate) fn _default_follow_space() -> DispatchResult {
     _follow_space(None, None)

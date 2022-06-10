@@ -4,7 +4,7 @@ use pallet_permissions::SpacePermission;
 use pallet_utils::{Content, SpaceId, User};
 
 use crate::mock::*;
-use crate::old_utils::{ACCOUNT1, ACCOUNT2, SPACE1};
+use crate::utils::{ACCOUNT1, ACCOUNT2, SPACE1};
 
 pub(crate) fn _transfer_default_space_ownership() -> DispatchResult {
     _transfer_space_ownership(None, None, None)

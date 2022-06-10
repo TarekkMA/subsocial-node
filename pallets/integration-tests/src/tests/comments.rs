@@ -8,7 +8,7 @@ use pallet_utils::{
 };
 
 use crate::mock::*;
-use crate::old_utils::*;
+use crate::utils::*;
 use crate::utils::posts_utils::*;
 use crate::utils::spaces_utils::*;
 

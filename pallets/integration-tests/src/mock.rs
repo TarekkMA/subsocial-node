@@ -33,7 +33,7 @@ use pallet_utils::{
     Error as UtilsError,
     SpaceId, PostId, User, Content,
 };
-use crate::old_utils::*;
+use crate::utils::*;
 
 type UncheckedExtrinsic = frame_system::mocking::MockUncheckedExtrinsic<TestRuntime>;
 type Block = frame_system::mocking::MockBlock<TestRuntime>;

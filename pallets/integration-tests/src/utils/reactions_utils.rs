@@ -4,7 +4,7 @@ use pallet_reactions::{ReactionId, ReactionKind};
 use pallet_utils::PostId;
 
 use crate::mock::*;
-use crate::old_utils::{ACCOUNT1, POST1};
+use crate::utils::{ACCOUNT1, POST1};
 
 pub(crate) fn reaction_upvote() -> ReactionKind {
     ReactionKind::Upvote

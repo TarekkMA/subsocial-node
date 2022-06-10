@@ -4,7 +4,7 @@ use pallet_posts::{Comment, PostExtension, PostUpdate};
 use pallet_utils::{Content, PostId, SpaceId};
 
 use crate::mock::*;
-use crate::old_utils::{ACCOUNT1, POST1, POST2, SPACE1, SPACE2};
+use crate::utils::{ACCOUNT1, POST1, POST2, SPACE1, SPACE2};
 
 pub(crate) fn post_content_ipfs() -> Content {
     Content::IPFS(b"bafyreidzue2dtxpj6n4x5mktrt7las5wz5diqma47zr25uau743dhe76we".to_vec())

@@ -1,7 +1,7 @@
 use frame_support::pallet_prelude::*;
 
 use crate::mock::*;
-use crate::old_utils::{ACCOUNT1, ACCOUNT2};
+use crate::utils::{ACCOUNT1, ACCOUNT2};
 
 pub(crate) fn _default_follow_account() -> DispatchResult {
     _follow_account(None, None)

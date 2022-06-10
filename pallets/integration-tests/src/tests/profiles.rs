@@ -5,7 +5,7 @@ use pallet_utils::Error as UtilsError;
 use pallet_utils::mock_functions::*;
 
 use crate::mock::*;
-use crate::old_utils::*;
+use crate::utils::*;
 use crate::utils::spaces_utils::*;
 use crate::utils::profile_utils::*;
 

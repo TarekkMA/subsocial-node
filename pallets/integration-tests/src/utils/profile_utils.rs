@@ -4,7 +4,7 @@ use pallet_profiles::ProfileUpdate;
 use pallet_utils::Content;
 
 use crate::mock::*;
-use crate::old_utils::{ACCOUNT1, SPACE1};
+use crate::utils::{ACCOUNT1, SPACE1};
 
 pub(crate) fn profile_content_ipfs() -> Content {
     Content::IPFS(b"QmRAQB6YaCyidP37UdDnjFY5vQuiaRtqdyoW2CuDgwxkA5".to_vec())

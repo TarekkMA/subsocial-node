@@ -3,7 +3,7 @@ use frame_support::{assert_noop, assert_ok};
 use pallet_profile_follows::Error as ProfileFollowsError;
 
 use crate::mock::*;
-use crate::old_utils::*;
+use crate::utils::*;
 use crate::utils::profile_follows_utils::*;
 
 #[test]
