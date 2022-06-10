@@ -52,23 +52,6 @@ pub(crate) const REACTION1: ReactionId = 1;
 pub(crate) const REACTION2: ReactionId = 2;
 
 
-pub(crate) fn permissions_where_everyone_can_create_post() -> SpacePermissions {
-    let mut default_permissions = DefaultSpacePermissions::get();
-    default_permissions.everyone = default_permissions.everyone
-        .map(|mut permissions| {
-            permissions.insert(SP::CreatePosts);
-            permissions
-        });
-
-    default_permissions
-}
-
-pub(crate) fn permissions_where_follower_can_create_post() -> SpacePermissions {
-    let mut default_permissions = DefaultSpacePermissions::get();
-    default_permissions.follower = Some(vec![SP::CreatePosts].into_iter().collect());
-
-    default_permissions
-}
 
 
 pub(crate) fn post_content_ipfs() -> Content {
@@ -407,10 +390,6 @@ pub(crate) fn default_role_content_ipfs() -> Content {
     Content::IPFS(b"QmRAQB6YaCyidP37UdDnjFY5vQuiBrcqdyoW1CuDgwxkD4".to_vec())
 }
 
-/// Permissions Set that includes next permission: ManageRoles
-pub(crate) fn permission_set_default() -> Vec<SpacePermission> {
-    vec![SP::ManageRoles]
-}
 
 
 pub fn _create_default_role() -> DispatchResult {
@@ -424,6 +403,8 @@ pub fn _create_role(
     content: Option<Content>,
     permissions: Option<Vec<SpacePermission>>,
 ) -> DispatchResult {
+    // TODO: remove
+    use crate::utils::permissions_utils::permission_set_default;
     Roles::create_role(
         origin.unwrap_or_else(|| Origin::signed(ACCOUNT1)),
         space_id.unwrap_or(SPACE1),
