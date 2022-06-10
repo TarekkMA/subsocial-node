@@ -3,7 +3,7 @@ use frame_support::{assert_noop, assert_ok};
 use pallet_profile_follows::Error as ProfileFollowsError;
 
 use crate::mock::*;
-use crate::utils::*;
+use crate::old_utils::*;
 
 #[test]
 fn follow_account_should_work() {

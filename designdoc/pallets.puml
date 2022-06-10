@@ -1,0 +1,50 @@
+@startuml
+
+
+component moderation
+component permissions
+component posts
+' component post_history
+component profile_follows
+component profiles
+' component porfile_history
+component reactions
+component roles
+component space_follows
+' component space_history
+component space_ownership
+component spaces
+'component utils
+
+moderation --> posts
+moderation --> spaces
+moderation --> space_follows
+'moderation --> utils
+
+posts --> space_follows
+posts --> spaces
+'posts --> utils
+
+spaces --> permissions
+'spaces --> utils
+
+space_follows --> spaces
+space_follows --> profiles
+'space_follows --> utils
+
+profile_follows --> profiles
+'profile_follows --> utils
+
+'profiles --> utils
+
+reactions --> posts
+'reactions --> utils
+reactions --> spaces
+
+roles --> permissions
+'roles --> utils
+
+space_ownership --> spaces
+'space_ownership --> utils
+
+@enduml

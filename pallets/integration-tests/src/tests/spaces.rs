@@ -7,7 +7,7 @@ use pallet_permissions::SpacePermission as SP;
 use pallet_utils::mock_functions::*;
 
 use crate::mock::*;
-use crate::utils::*;
+use crate::old_utils::*;
 
 #[test]
 fn create_subspace_should_fail_when_content_is_blocked() {

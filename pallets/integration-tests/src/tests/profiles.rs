@@ -5,7 +5,7 @@ use pallet_utils::Error as UtilsError;
 use pallet_utils::mock_functions::*;
 
 use crate::mock::*;
-use crate::utils::*;
+use crate::old_utils::*;
 
 #[test]
 fn create_profile_should_work() {

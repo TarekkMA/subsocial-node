@@ -8,7 +8,7 @@ use pallet_utils::{
     DEFAULT_MIN_HANDLE_LEN,
 };
 use crate::mock::*;
-use crate::utils::*;
+use crate::old_utils::*;
 
 
 #[test]

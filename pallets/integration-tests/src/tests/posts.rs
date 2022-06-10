@@ -9,7 +9,7 @@ use pallet_utils::{
 };
 
 use crate::mock::*;
-use crate::utils::*;
+use crate::old_utils::*;
 
 
 #[test]
