@@ -8,6 +8,7 @@ use pallet_utils::mock_functions::*;
 
 use crate::mock::*;
 use crate::old_utils::*;
+use crate::utils::posts_utils::*;
 use crate::utils::spaces_utils::*;
 use crate::utils::permissions_utils::*;
 use crate::utils::moderation_utils::*;

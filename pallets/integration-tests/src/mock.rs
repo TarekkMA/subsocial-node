@@ -228,6 +228,7 @@ pub(crate) type BlockNumber = u64;
 pub struct ExtBuilder;
 
 // TODO: refactor
+use crate::utils::posts_utils::*;
 use crate::utils::spaces_utils::*;
 use crate::utils::roles_utils::*;
 use crate::utils::space_ownership_utils::*;

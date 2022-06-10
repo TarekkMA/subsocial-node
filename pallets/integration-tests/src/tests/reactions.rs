@@ -6,6 +6,7 @@ use pallet_posts::{Comment, Error as PostsError, Post, PostExtension, PostUpdate
 use crate::mock::*;
 use crate::old_utils::*;
 
+use crate::utils::posts_utils::*;
 use crate::utils::spaces_utils::*;
 use crate::utils::reactions_utils::*;
 
