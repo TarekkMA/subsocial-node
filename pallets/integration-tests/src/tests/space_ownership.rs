@@ -6,6 +6,7 @@ use pallet_spaces::Error as SpacesError;
 
 use crate::mock::*;
 use crate::old_utils::*;
+use crate::utils::spaces_utils::*;
 
 #[test]
 fn transfer_space_ownership_should_work() {

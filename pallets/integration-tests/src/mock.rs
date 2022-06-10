@@ -227,6 +227,10 @@ pub(crate) type BlockNumber = u64;
 
 pub struct ExtBuilder;
 
+// TODO: refactor
+use crate::utils::spaces_utils::*;
+
+
 // TODO: make created space/post/comment configurable or by default
 impl ExtBuilder {
     fn configure_storages(storage: &mut Storage) {

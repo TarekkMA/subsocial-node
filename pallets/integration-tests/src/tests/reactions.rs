@@ -6,6 +6,8 @@ use pallet_posts::{Comment, Error as PostsError, Post, PostExtension, PostUpdate
 use crate::mock::*;
 use crate::old_utils::*;
 
+use crate::utils::spaces_utils::*;
+
 #[test]
 fn create_post_reaction_should_work_upvote() {
     ExtBuilder::build_with_post().execute_with(|| {

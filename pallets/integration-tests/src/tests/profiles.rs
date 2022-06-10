@@ -6,6 +6,7 @@ use pallet_utils::mock_functions::*;
 
 use crate::mock::*;
 use crate::old_utils::*;
+use crate::utils::spaces_utils::*;
 
 #[test]
 fn create_profile_should_work() {

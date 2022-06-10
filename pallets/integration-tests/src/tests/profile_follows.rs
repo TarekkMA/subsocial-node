@@ -4,6 +4,7 @@ use pallet_profile_follows::Error as ProfileFollowsError;
 
 use crate::mock::*;
 use crate::old_utils::*;
+use crate::utils::spaces_utils::*;
 
 #[test]
 fn follow_account_should_work() {
