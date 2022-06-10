@@ -10,6 +10,7 @@ use crate::mock::*;
 use crate::old_utils::*;
 use crate::utils::spaces_utils::*;
 use crate::utils::permissions_utils::*;
+use crate::utils::moderation_utils::*;
 
 #[test]
 fn create_subspace_should_fail_when_content_is_blocked() {
