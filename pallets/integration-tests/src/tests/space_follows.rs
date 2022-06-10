@@ -6,6 +6,7 @@ use pallet_space_follows::Error as SpaceFollowsError;
 use crate::mock::*;
 use crate::old_utils::*;
 use crate::utils::spaces_utils::*;
+use crate::utils::space_follows_utils::*;
 
 #[test]
 fn follow_space_should_work() {

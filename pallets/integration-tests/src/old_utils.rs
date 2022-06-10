@@ -94,29 +94,6 @@ pub(crate) fn extension_shared_post(post_id: PostId) -> PostExtension {
     PostExtension::SharedPost(post_id)
 }
 
-/// Account 2 follows Space 1
-pub(crate) fn _default_follow_space() -> DispatchResult {
-    _follow_space(None, None)
-}
-
-pub(crate) fn _follow_space(origin: Option<Origin>, space_id: Option<SpaceId>) -> DispatchResult {
-    SpaceFollows::follow_space(
-        origin.unwrap_or_else(|| Origin::signed(ACCOUNT2)),
-        space_id.unwrap_or(SPACE1),
-    )
-}
-
-pub(crate) fn _default_unfollow_space() -> DispatchResult {
-    _unfollow_space(None, None)
-}
-
-pub(crate) fn _unfollow_space(origin: Option<Origin>, space_id: Option<SpaceId>) -> DispatchResult {
-    SpaceFollows::unfollow_space(
-        origin.unwrap_or_else(|| Origin::signed(ACCOUNT2)),
-        space_id.unwrap_or(SPACE1),
-    )
-}
-
 pub(crate) fn _create_default_post() -> DispatchResult {
     _create_post(None, None, None, None)
 }
