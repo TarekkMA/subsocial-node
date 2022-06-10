@@ -82,10 +82,6 @@ pub(crate) fn reply_content_ipfs() -> Content {
     Content::IPFS(b"QmYA2fn8cMbVWo4v95RwcwJVyQsNtnEwHerfWR8UNtEwoE".to_vec())
 }
 
-pub(crate) fn profile_content_ipfs() -> Content {
-    Content::IPFS(b"QmRAQB6YaCyidP37UdDnjFY5vQuiaRtqdyoW2CuDgwxkA5".to_vec())
-}
-
 pub(crate) fn reaction_upvote() -> ReactionKind {
     ReactionKind::Upvote
 }
@@ -284,30 +280,4 @@ pub(crate) fn _delete_comment_reaction(
     reaction_id: ReactionId,
 ) -> DispatchResult {
     _delete_post_reaction(origin, Some(post_id.unwrap_or(2)), reaction_id)
-}
-
-pub(crate) fn _create_default_profile() -> DispatchResult {
-    _create_profile(None, None)
-}
-
-pub(crate) fn _create_profile(
-    origin: Option<Origin>,
-    content: Option<Content>
-) -> DispatchResult {
-    Profiles::create_profile(
-        origin.unwrap_or_else(|| Origin::signed(ACCOUNT1)),
-        content.unwrap_or_else(profile_content_ipfs),
-    )
-}
-
-pub(crate) fn _update_profile(
-    origin: Option<Origin>,
-    content: Option<Content>
-) -> DispatchResult {
-    Profiles::update_profile(
-        origin.unwrap_or_else(|| Origin::signed(ACCOUNT1)),
-        ProfileUpdate {
-            content,
-        },
-    )
 }
