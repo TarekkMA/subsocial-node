@@ -7,6 +7,7 @@ use crate::mock::*;
 use crate::old_utils::*;
 
 use crate::utils::spaces_utils::*;
+use crate::utils::reactions_utils::*;
 
 #[test]
 fn create_post_reaction_should_work_upvote() {

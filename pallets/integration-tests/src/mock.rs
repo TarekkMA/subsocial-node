@@ -231,6 +231,7 @@ pub struct ExtBuilder;
 use crate::utils::spaces_utils::*;
 use crate::utils::roles_utils::*;
 use crate::utils::space_ownership_utils::*;
+use crate::utils::reactions_utils::*;
 
 
 // TODO: make created space/post/comment configurable or by default
