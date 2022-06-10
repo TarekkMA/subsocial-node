@@ -12,6 +12,7 @@ use crate::mock::*;
 use crate::old_utils::*;
 use crate::utils::spaces_utils::*;
 use crate::utils::moderation_utils::*;
+use crate::utils::roles_utils::*;
 
 
 #[test]
