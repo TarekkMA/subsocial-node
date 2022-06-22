@@ -50,7 +50,6 @@ frame_support::construct_runtime!(
             Posts: pallet_posts::{Pallet, Call, Storage, Event<T>},
             ProfileFollows: pallet_profile_follows::{Pallet, Call, Storage, Event<T>},
             Profiles: pallet_profiles::{Pallet, Call, Storage, Event<T>},
-            ProfileHistory: pallet_profile_history::{Pallet, Storage},
             Reactions: pallet_reactions::{Pallet, Call, Storage, Event<T>},
             Roles: pallet_roles::{Pallet, Call, Storage, Event<T>},
             SpaceFollows: pallet_space_follows::{Pallet, Call, Storage, Event<T>},
@@ -156,10 +155,8 @@ impl pallet_profile_follows::Config for TestRuntime {
 
 impl pallet_profiles::Config for TestRuntime {
     type Event = Event;
-    type AfterProfileUpdated = ProfileHistory;
+    type AfterProfileUpdated = ();
 }
-
-impl pallet_profile_history::Config for TestRuntime {}
 
 impl pallet_reactions::Config for TestRuntime {
     type Event = Event;

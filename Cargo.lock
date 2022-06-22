@@ -2284,7 +2284,6 @@ dependencies = [
  "pallet-permissions",
  "pallet-posts",
  "pallet-profile-follows",
- "pallet-profile-history",
  "pallet-profiles",
  "pallet-reactions",
  "pallet-roles",
