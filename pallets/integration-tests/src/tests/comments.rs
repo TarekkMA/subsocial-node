@@ -37,8 +37,6 @@ fn create_comment_should_work() {
         assert_eq!(comment.shares_count, 0);
         assert_eq!(comment.upvotes_count, 0);
         assert_eq!(comment.downvotes_count, 0);
-
-        assert!(PostHistory::edit_history(POST2).is_empty());
     });
 }
 
@@ -167,11 +165,6 @@ fn update_comment_should_work() {
         let comment = Posts::post_by_id(POST2).unwrap();
         assert_eq!(comment.content, reply_content_ipfs());
 
-        // Check whether history recorded correctly
-        assert_eq!(
-            PostHistory::edit_history(POST2)[0].old_data.content,
-            Some(comment_content_ipfs())
-        );
     });
 }
 

@@ -2282,7 +2282,6 @@ dependencies = [
  "frame-system",
  "pallet-balances",
  "pallet-permissions",
- "pallet-post-history",
  "pallet-posts",
  "pallet-profile-follows",
  "pallet-profile-history",

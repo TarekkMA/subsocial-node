@@ -48,7 +48,6 @@ frame_support::construct_runtime!(
             Timestamp: pallet_timestamp::{Pallet, Call, Storage, Inherent},
             Permissions: pallet_permissions::{Pallet, Call},
             Posts: pallet_posts::{Pallet, Call, Storage, Event<T>},
-            PostHistory: pallet_post_history::{Pallet, Storage},
             ProfileFollows: pallet_profile_follows::{Pallet, Call, Storage, Event<T>},
             Profiles: pallet_profiles::{Pallet, Call, Storage, Event<T>},
             ProfileHistory: pallet_profile_history::{Pallet, Storage},
@@ -145,11 +144,9 @@ parameter_types! {
 impl pallet_posts::Config for TestRuntime {
     type Event = Event;
     type MaxCommentDepth = MaxCommentDepth;
-    type AfterPostUpdated = PostHistory;
+    type AfterPostUpdated = ();
     type IsPostBlocked = MockModeration;
 }
-
-impl pallet_post_history::Config for TestRuntime {}
 
 impl pallet_profile_follows::Config for TestRuntime {
     type Event = Event;
