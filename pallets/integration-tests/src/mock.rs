@@ -21,7 +21,7 @@ use pallet_permissions::{
 };
 use pallet_posts::{Post, PostUpdate, PostExtension, Comment, Error as PostsError};
 use pallet_profiles::{ProfileUpdate, Error as ProfilesError};
-use pallet_reactions::{ReactionId, ReactionKind, Error as ReactionsError};
+// use pallet_reactions::{ReactionId, ReactionKind, Error as ReactionsError};
 use pallet_spaces::{SpaceById, SpaceUpdate, Error as SpacesError, SpacesSettings};
 use pallet_space_follows::Error as SpaceFollowsError;
 use pallet_space_ownership::Error as SpaceOwnershipError;
@@ -48,7 +48,7 @@ frame_support::construct_runtime!(
             Permissions: pallet_permissions::{Pallet, Call},
             Posts: pallet_posts::{Pallet, Call, Storage, Event<T>},
             Profiles: pallet_profiles::{Pallet, Call, Storage, Event<T>},
-            Reactions: pallet_reactions::{Pallet, Call, Storage, Event<T>},
+            // Reactions: pallet_reactions::{Pallet, Call, Storage, Event<T>},
             Roles: pallet_roles::{Pallet, Call, Storage, Event<T>},
             SpaceFollows: pallet_space_follows::{Pallet, Call, Storage, Event<T>},
             SpaceOwnership: pallet_space_ownership::{Pallet, Call, Storage, Event<T>},
@@ -149,9 +149,9 @@ impl pallet_profiles::Config for TestRuntime {
     type AfterProfileUpdated = ();
 }
 
-impl pallet_reactions::Config for TestRuntime {
-    type Event = Event;
-}
+// impl pallet_reactions::Config for TestRuntime {
+//     type Event = Event;
+// }
 
 parameter_types! {
         pub const MaxUsersToProcessPerDeleteRole: u16 = 40;
@@ -289,7 +289,7 @@ impl ExtBuilder {
     /// Custom ext configuration with SpaceId 1, PostId 1 and ReactionId 1 (on post) where BlockNumber is 1
     pub fn build_with_reacted_post_and_two_spaces() -> TestExternalities {
         let mut ext = Self::build_with_post_and_two_spaces();
-        ext.execute_with(|| { assert_ok!(_create_default_post_reaction()); });
+        // ext.execute_with(|| { assert_ok!(_create_default_post_reaction()); });
         ext
     }
 
