@@ -24,7 +24,7 @@ use pallet_profiles::{ProfileUpdate, Error as ProfilesError};
 // use pallet_reactions::{ReactionId, ReactionKind, Error as ReactionsError};
 use pallet_spaces::{SpaceById, SpaceUpdate, Error as SpacesError, SpacesSettings};
 use pallet_space_follows::Error as SpaceFollowsError;
-use pallet_space_ownership::Error as SpaceOwnershipError;
+// use pallet_space_ownership::Error as SpaceOwnershipError;
 use pallet_utils::{
     mock_functions::*,
     DEFAULT_MIN_HANDLE_LEN, DEFAULT_MAX_HANDLE_LEN,
@@ -51,7 +51,7 @@ frame_support::construct_runtime!(
             // Reactions: pallet_reactions::{Pallet, Call, Storage, Event<T>},
             Roles: pallet_roles::{Pallet, Call, Storage, Event<T>},
             SpaceFollows: pallet_space_follows::{Pallet, Call, Storage, Event<T>},
-            SpaceOwnership: pallet_space_ownership::{Pallet, Call, Storage, Event<T>},
+            // SpaceOwnership: pallet_space_ownership::{Pallet, Call, Storage, Event<T>},
             Spaces: pallet_spaces::{Pallet, Call, Storage, Event<T>, Config<T>},
             Utils: pallet_utils::{Pallet, Storage, Event<T>, Config<T>},
         }
@@ -172,9 +172,9 @@ impl pallet_space_follows::Config for TestRuntime {
     type BeforeSpaceUnfollowed = ();
 }
 
-impl pallet_space_ownership::Config for TestRuntime {
-    type Event = Event;
-}
+// impl pallet_space_ownership::Config for TestRuntime {
+//     type Event = Event;
+// }
 
 pub(crate) const HANDLE_DEPOSIT: u64 = 15;
 
@@ -296,10 +296,11 @@ impl ExtBuilder {
     /// Custom ext configuration with pending ownership transfer without Space
     pub fn build_with_pending_ownership_transfer_no_space() -> TestExternalities {
         let mut ext = Self::build_with_space();
-        ext.execute_with(|| {
-            assert_ok!(_transfer_default_space_ownership());
-            <SpaceById<TestRuntime>>::remove(SPACE1);
-        });
+        // TODO: re-enable update_post_should_work_after_transfer_space_ownership()
+        // ext.execute_with(|| {
+        //     assert_ok!(_transfer_default_space_ownership());
+        //     <SpaceById<TestRuntime>>::remove(SPACE1);
+        // });
         ext
     }
 
