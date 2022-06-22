@@ -53,7 +53,6 @@ frame_support::construct_runtime!(
             Reactions: pallet_reactions::{Pallet, Call, Storage, Event<T>},
             Roles: pallet_roles::{Pallet, Call, Storage, Event<T>},
             SpaceFollows: pallet_space_follows::{Pallet, Call, Storage, Event<T>},
-            SpaceHistory: pallet_space_history::{Pallet, Storage},
             SpaceOwnership: pallet_space_ownership::{Pallet, Call, Storage, Event<T>},
             Spaces: pallet_spaces::{Pallet, Call, Storage, Event<T>, Config<T>},
             Utils: pallet_utils::{Pallet, Storage, Event<T>, Config<T>},
@@ -197,13 +196,11 @@ impl pallet_spaces::Config for TestRuntime {
     type Roles = Roles;
     type SpaceFollows = SpaceFollows;
     type BeforeSpaceCreated = SpaceFollows;
-    type AfterSpaceUpdated = SpaceHistory;
+    type AfterSpaceUpdated = ();
     type IsAccountBlocked = MockModeration;
     type IsContentBlocked = MockModeration;
     type HandleDeposit = HandleDeposit;
 }
-
-impl pallet_space_history::Config for TestRuntime {}
 
 pub(crate) type AccountId = u64;
 pub(crate) type BlockNumber = u64;

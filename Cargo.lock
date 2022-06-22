@@ -2288,7 +2288,6 @@ dependencies = [
  "pallet-reactions",
  "pallet-roles",
  "pallet-space-follows",
- "pallet-space-history",
  "pallet-space-ownership",
  "pallet-spaces",
  "pallet-timestamp",
