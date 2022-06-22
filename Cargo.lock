@@ -2277,10 +2277,10 @@ dependencies = [
 name = "integration-tests"
 version = "0.7.3"
 dependencies = [
+ "df-traits",
  "frame-support",
  "frame-system",
  "pallet-balances",
- "pallet-moderation",
  "pallet-permissions",
  "pallet-post-history",
  "pallet-posts",
