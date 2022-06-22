@@ -21,7 +21,6 @@ use pallet_permissions::{
 };
 use pallet_posts::{Post, PostUpdate, PostExtension, Comment, Error as PostsError};
 use pallet_profiles::{ProfileUpdate, Error as ProfilesError};
-use pallet_profile_follows::Error as ProfileFollowsError;
 use pallet_reactions::{ReactionId, ReactionKind, Error as ReactionsError};
 use pallet_spaces::{SpaceById, SpaceUpdate, Error as SpacesError, SpacesSettings};
 use pallet_space_follows::Error as SpaceFollowsError;
@@ -48,7 +47,6 @@ frame_support::construct_runtime!(
             Timestamp: pallet_timestamp::{Pallet, Call, Storage, Inherent},
             Permissions: pallet_permissions::{Pallet, Call},
             Posts: pallet_posts::{Pallet, Call, Storage, Event<T>},
-            ProfileFollows: pallet_profile_follows::{Pallet, Call, Storage, Event<T>},
             Profiles: pallet_profiles::{Pallet, Call, Storage, Event<T>},
             Reactions: pallet_reactions::{Pallet, Call, Storage, Event<T>},
             Roles: pallet_roles::{Pallet, Call, Storage, Event<T>},
@@ -144,12 +142,6 @@ impl pallet_posts::Config for TestRuntime {
     type MaxCommentDepth = MaxCommentDepth;
     type AfterPostUpdated = ();
     type IsPostBlocked = MockModeration;
-}
-
-impl pallet_profile_follows::Config for TestRuntime {
-    type Event = Event;
-    type BeforeAccountFollowed = ();
-    type BeforeAccountUnfollowed = ();
 }
 
 impl pallet_profiles::Config for TestRuntime {

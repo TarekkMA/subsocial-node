@@ -24,7 +24,6 @@ std = [
     'frame-system/std',
     'pallet-permissions/std',
     'pallet-posts/std',
-    'pallet-profile-follows/std',
     'pallet-profiles/std',
     'pallet-reactions/std',
     'pallet-roles/std',
@@ -52,7 +51,6 @@ serde = { version = '1.0.119' }
 
 pallet-permissions = { default-features = false, path = '../permissions' }
 pallet-posts = { default-features = false, path = '../posts' }
-pallet-profile-follows = { default-features = false, path = '../profile-follows' }
 pallet-profiles = { default-features = false, path = '../profiles' }
 pallet-reactions = { default-features = false, path = '../reactions' }
 pallet-roles = { default-features = false, path = '../roles' }

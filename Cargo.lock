@@ -2283,7 +2283,6 @@ dependencies = [
  "pallet-balances",
  "pallet-permissions",
  "pallet-posts",
- "pallet-profile-follows",
  "pallet-profiles",
  "pallet-reactions",
  "pallet-roles",
